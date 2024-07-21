@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px 0;
+            text-align: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        input {
+            height: 20px;
+            width: 50px;
+            background: orange;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: .9em;
+            text-align: center;
+
+        }
+
+        p {
+            font: 1.2em Arial, sans-serif;
+        }
+
+        span {
+            font: 1em Arial, sans-serif;
+
+            margin-left: 2px;
+        }
+        #x1, #x2{
+            color: green;
+        }
+        #kok1,
+        #kok2 {
+            color: red;
+        }
+
+        button {
+            width: 50px;
+            background: yellowgreen;
+            border: none;
+            margin-left: 10px;
+            height: 20px;
+        }
+
+        .blcok {
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blcok">
+        <input type="number" id="a">x<sup>2</sup> +<input type="number" id="b">X + <input type="number" id="c"> <button
+            onclick="hesab()">=</button>
+
+
+        <p>x1: <span id="x1"></span> <span id="kok1"></span></p>
+        <p>x2: <span id="x2"></span><span id="kok2"></span></p>
+    </div>
+    <script>
+        let a = document.getElementById("a")
+        let b = document.getElementById("b")
+        let c = document.getElementById("c")
+        let netice = document.getElementById("netice")
+        let x1 = document.getElementById("x1")
+        let x2 = document.getElementById("x2")
+        let kok1 = document.getElementById("kok1")
+        let kok2 = document.getElementById("kok2")
+
+        function hesab() {
+            x1.innerHTML = (- +b.value * +b.value + 4 * a.value * c.value) / 2 * a.value
+            x2.innerHTML = (- +b.value * b.value - 4 * a.value * c.value) / 2 * a.value
+            if (x1.innerHTML > 0) {
+                kok1.innerHTML = "2 kok var"
+
+            } else {
+                x1.innerHTML == 0
+                kok1.innerHTML = "kökü 0 di"
+            }
+            if (x2.innerHTML < 0) {
+                kok2.innerHTML = "kökü yoxdur"
+
+            } else {
+                x2.innerHTML == 0
+                kok2.innerHTML = "kökü 0 di"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

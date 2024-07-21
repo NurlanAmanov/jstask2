@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+input {
+width: 40px;
+}
+</style>
+</head>
+
+<body>
+<input type="number" id="a" />
+<span id="ntc1"></span>
+<input type="number" id="b" />
+<span id="ntc2"></span>
+<input type="number" id="c">
+<button onclick="yoxla()">Ok</button>
+<script>
+let a = document.getElementById("a")
+let b = document.getElementById("b")
+let c = document.getElementById("c")
+let ntc1 = document.getElementById("ntc1")
+let ntc2 = document.getElementById("ntc2")
+function yoxla() {
+    if (a.value < b.value )
+     ntc1.innerHTML = "<"
+    ntc2.innerHTML = "<"
+    if ( b.value < c.value)
+    ntc2.innerHTML = "<"
+else if (a.value > b.value )
+  ntc1.innerHTML = ">"
+   
+else if(b.value > c.value)
+  ntc2.innerHTML = ">"
+else if ( a.value < b.value)
+ntc1.innerHTML = "<"
+else if (b.value > c.value)
+ntc2.innerHTML = ">"
+else {
+        ntc1.innerHTML = "="
+         ntc2.innerHTML = "="
+}
+
+//    yeniden baxilacaq
+}
+
+</script>
+</body>
+
+</html>

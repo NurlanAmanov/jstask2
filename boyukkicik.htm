@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.block{
+   background: #3de3d3;
+    padding: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ 
+  text-align: center;
+}
+
+button{
+    height: 30px;
+    width: 50px;
+    border: none;
+    background: yellowgreen;
+}
+span{
+    font-size: 20px;
+    color: #fff;
+}
+input{
+    text-align: center;
+    outline: none;
+    border: none;
+    background: orange;
+    width: 50px;
+    height: 30px;
+    margin: 20px
+}
+    </style>
+</head>
+<body>
+    <div class="block"> 
+    <input type="number" id="a" > 
+    <span id="ntc">?</span>  
+    <input type="number" id="b">
+    <button onclick="yoxla()">OK </button> </div>
+    <script>
+        let a = document.getElementById("a")
+        let b =document.getElementById("b")
+        let ntc=document.getElementById("ntc")
+function yoxla(){
+
+if (+a.value > +b.value) {
+    ntc.innerHTML = ">"
+} 
+else if (+a.value < +b.value) {
+    ntc.innerHTML = "<"
+} 
+else {
+    ntc.innerHTML = "="
+}
+
+}
+    </script>
+</body>
+</html>
