@@ -26,24 +26,25 @@ let c = document.getElementById("c")
 let ntc1 = document.getElementById("ntc1")
 let ntc2 = document.getElementById("ntc2")
 function yoxla() {
-    if (a.value < b.value )
-     ntc1.innerHTML = "<"
-    ntc2.innerHTML = "<"
-    if ( b.value < c.value)
-    ntc2.innerHTML = "<"
-else if (a.value > b.value )
-  ntc1.innerHTML = ">"
-   
-else if(b.value > c.value)
-  ntc2.innerHTML = ">"
-else if ( a.value < b.value)
-ntc1.innerHTML = "<"
-else if (b.value > c.value)
-ntc2.innerHTML = ">"
-else {
-        ntc1.innerHTML = "="
-         ntc2.innerHTML = "="
-}
+  if (a.value && b.value   &&  c.value) {
+                if (+a.value > +b.value) {
+                  ntc1.innerHTML = ">"
+                }
+                else if (+a.value < +b.value) {
+                  ntc1.innerHTML = "<"
+                } else {
+                    result1.innerHTML = "="
+                }
+                if (+b.value > +c.value) {
+                    ntc2.innerHTML = ">"
+                }
+                else if (+b.value < +c.value) {
+                    ntc2.innerHTML = "<"
+                }
+                else {
+                    ntc2.innerHTML = "="
+                }
+            }
 
 //    yeniden baxilacaq
 }
