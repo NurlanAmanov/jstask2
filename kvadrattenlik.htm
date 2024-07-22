@@ -61,8 +61,7 @@
     <div class="blcok">
         <input type="number" id="a">x<sup>2</sup> +<input type="number" id="b">X + <input type="number" id="c"> <button
             onclick="hesab()">=</button>
-
-
+            <p>Netice <span id="netice"></span></p>
         <p>x1: <span id="x1"></span> <span id="kok1"></span></p>
         <p>x2: <span id="x2"></span><span id="kok2"></span></p>
     </div>
@@ -77,23 +76,29 @@
         let kok2 = document.getElementById("kok2")
 
         function hesab() {
-            x1.innerHTML = (- +b.value * +b.value + 4 * a.value * c.value) / 2 * a.value
-            x2.innerHTML = (- +b.value * b.value - 4 * a.value * c.value) / 2 * a.value
-            if (x1.innerHTML > 0) {
-                kok1.innerHTML = "2 kok var"
+           
+           
 
-            } else {
-                x1.innerHTML == 0
-                kok1.innerHTML = "kökü 0 di"
-            }
-            if (x2.innerHTML < 0) {
-                kok2.innerHTML = "kökü yoxdur"
+            netice.innerHTML=  b.value ** 2 - (4 * a.value * c.value)
+           let diskr = netice.innerHTML
+            if (diskr > 0) {
+                x1.innerHTML = (- +b.value * +b.value + 4 * a.value * c.value) / 2 * a.value
+                x2.innerHTML = (- +b.value * b.value - 4 * a.value * c.value) / 2 * a.value
 
-            } else {
-                x2.innerHTML == 0
-                kok2.innerHTML = "kökü 0 di"
+            } else if (diskr==0){
+                x1.innerHTML= x2.innerHTML =  - +b.value / (2 * +a.value)
             }
+            else {
+                x1.innerHTML =x2.innerHTML ="Köklər yoxdur"  
+               
+            }
+         
+        
+            
         }
+       
+
+       
 
     </script>
 </body>
